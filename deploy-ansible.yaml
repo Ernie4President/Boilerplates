@@ -43,7 +43,7 @@
         update_cache: yes
 #      when: "'debian' in group_names"
  
-    - name: Add a new user named ansiblessh
+    - name: Add a new user named serveradmin
       user:
           name=serveradmin
           password={{ ansible_user_password | password_hash('sha512') }}
@@ -58,7 +58,7 @@
 
     - name: Deploy SSH Key
       authorized_key: user=serveradmin
-                      key="{{ lookup('file', '/home/serveradmin/.ssh/id_ed25519.pub') }}"
+                      key="{{ lookup('file', '˜/.ssh/id_ed25519.pub') }}"
                       state=present
  
  
