@@ -57,7 +57,7 @@
 # to the host
 
     - name: Deploy SSH Key
-      authorized_key: user=ansiblessh
+      authorized_key: user=serveradmin
                       key="{{ lookup('file', '/home/serveradmin/.ssh/id_ed25519.pub') }}"
                       state=present
  
