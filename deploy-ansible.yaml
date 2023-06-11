@@ -26,7 +26,7 @@
 # Now we can - still as root or whatever user
 # we use for the first connection - do the 
 # following tasks with ansible already.
-# the variables for this are defined in rundeck.
+# the variables are defined in semaphore.
 # ##############################################
 
 
