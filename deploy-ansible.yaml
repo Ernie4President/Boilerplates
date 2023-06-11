@@ -48,7 +48,7 @@
           name=serveradmin
           password={{ ansible_user_password }}
  
-    - name: Add ansiblessh user to the sudoers
+    - name: Add serveradmin user to the sudoers
       copy:
           dest:    "/etc/sudoers.d/serveradmin"
           content: "serveradmin  ALL=(ALL)  NOPASSWD: ALL"
