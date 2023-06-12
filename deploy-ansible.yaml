@@ -58,7 +58,7 @@
 
     - name: Deploy SSH Key
       authorized_key: user=serveradmin
-                      key="{{ lookup('file', '˜/.ssh/id_ed25519.pub') }}"
+                      key="{{ lookup('file', '~/.ssh/id_ed25519.pub') }}"
                       state=present
  
  
