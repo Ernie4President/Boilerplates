@@ -1,6 +1,12 @@
 - hosts: "*"
   become: yes
   tasks:
+    - name: ping
+      ping:
+      register: ping_results
+    - name: ping_results
+      debug:
+      var: ping_results
     - name: apt
       apt:
         update_cache: yes
