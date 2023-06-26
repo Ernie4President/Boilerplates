@@ -1,10 +1,7 @@
 - hosts: "*"
-  become: yes
+  become: true
   tasks:
-    - name: ping
-      ping:
-      register: ping_results
-    - name: apt
+    - name: update apt packages
       apt:
         update_cache: yes
-        upgrade: 'yes'
+        upgrade: yes
